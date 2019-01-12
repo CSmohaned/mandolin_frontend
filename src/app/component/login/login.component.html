@@ -1,0 +1,22 @@
+<br><br>
+<mat-card class="example-card"  >
+    <mat-card-header>
+        <div mat-card-avatar class="example-header"></div>
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-subtitle>Mandolin Account</mat-card-subtitle>
+      </mat-card-header>
+    <mat-card-content  >
+<div class="example-container">
+  <mat-form-field>
+    <input  placeholder="Username" [(ngModel)]="username" name="username" matInput   type="text" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password"  [(ngModel)]="password" name="password" type="password" >
+  </mat-form-field>      
+</div>
+<div class="example-button-row">
+<button mat-flat-button class="subb" type="submit" (click)="onLogin()" >Login</button>
+</div>
+</mat-card-content>
+</mat-card>

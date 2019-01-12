@@ -1,0 +1,33 @@
+<br><br>
+<mat-card class="example-card" >
+    <mat-card-header>
+        <div mat-card-avatar class="example-header"></div>
+        <mat-card-title>Add Line</mat-card-title>
+        <mat-card-subtitle>Mandoline</mat-card-subtitle>
+      </mat-card-header>
+    <mat-card-content >
+<div class="example-container">
+    <mat-form-field>
+        <input matInput placeholder="Username" [(ngModel)]="username" name="username" type="text">
+      </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="name" name="name" type="text">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Price" [(ngModel)]="price" name="price" type="number">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Lat Of LineStops" [(ngModel)]="lat" name="lat" type="number">
+          </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Lang Of LineStops" [(ngModel)]="lang" name="lang" type="number">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Name Of LineStops" [(ngModel)]="nameline" name="nameline" type="text">
+        </mat-form-field>
+</div>
+<div class="example-button-row">
+<button mat-flat-button class="subb" (click)="onSubmit()" type="submit">Submit</button>
+</div>
+</mat-card-content>
+</mat-card>

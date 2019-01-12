@@ -1,0 +1,37 @@
+<mat-toolbar style="background-color:#673ab7">
+    <mat-toolbar-row>
+      <span>Mandolin</span>
+      <div class="example-button-row1">
+            
+            <a mat-stroked-button class="button1" routerLink="/" 
+            [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
+            >Home</a>
+        </div>
+          <div class="example-button-row1">
+                
+                <a mat-stroked-button class="button1" routerLink="/addline" 
+                *ngIf="_userService.isLoggedIn()" [routerLinkActive]="['active']"
+                >Add Line</a>
+            </div>
+            <div class="example-button-row1">
+                    <a mat-stroked-button class="button1" routerLink="/addbus"
+                    *ngIf="_userService.isLoggedIn()" [routerLinkActive]="['active']"
+                    >Add Bus</a>
+                </div>
+                <div class="example-button-row1">
+                        <a mat-stroked-button class="button1"  routerLink="/addstop" 
+                        *ngIf="_userService.isLoggedIn()" [routerLinkActive]="['active']"
+                        >Add Stop</a>
+                    </div>
+          <div class="example-button-row2">
+              <button mat-stroked-button class="button1" routerLink="/login" 
+              *ngIf="!_userService.isLoggedIn()" [routerLinkActive]="['active']"
+              >Login</button>
+            </div>
+              <div class="example-button-row3">
+                  <button mat-stroked-button class="button1" (click)="onLogOutClicked()" href="#" 
+                  *ngIf="_userService.isLoggedIn()"
+                  >Logout</button>
+                </div>
+    </mat-toolbar-row>
+    </mat-toolbar>
